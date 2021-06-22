@@ -66,75 +66,7 @@ var question_three = document.getElementById('question-3');
 var question_four = document.getElementById('question-4');
 var question_five = document.getElementById('question-5');
 var question_six = document.getElementById('question-6');
-// var question_seven = document.getElementById('question-7');
-// var question_eight = document.getElementById('question-8');
-// var question_nine = document.getElementById('question-9');
-// var question_ten = document.getElementById('question-10');
 
-// function storeAnswer(question_number, event){
-//     if(event.target.type === 'radio'){
-//         console.log(event.target.value);
-//         answers['question'+question_number] = parseInt(event.target.value);
-//         console.log(answers);
-//     }
-// }
-
-// question_one.addEventListener('click', function(event){
-//     storeAnswer(1, event)
-// })
-// question_two.addEventListener('click', function(event){
-//     storeAnswer(2, event)
-// })
-// question_three.addEventListener('click', function(event){
-//     storeAnswer(3, event)
-// })
-// question_four.addEventListener('click', function(event){
-//     storeAnswer(4, event)
-// })
-// question_five.addEventListener('click', function(event){
-//     storeAnswer(5, event)
-// })
-// question_six.addEventListener('click', function(event){
-//     storeAnswer(6, event)
-// })
-// question_seven.addEventListener('click', function(event){
-//     storeAnswer(7, event)
-// })
-// question_eight.addEventListener('click', function(event){
-//     storeAnswer(8, event)
-// })
-// question_nine.addEventListener('click', function(event){
-//     storeAnswer(9, event)
-// })
-// question_ten.addEventListener('click', function(event){
-//     storeAnswer(10, event)
-// })
-
-// function totalScore(){
-//     var total_score = 
-//     answers.question1+
-//     answers.question2+
-//     answers.question3+
-//     answers.question4+ 
-//     answers.question5+
-//     answers.question6;
-//     answers.question7+
-//     answers.question8+
-//     answers.question9+
-//     answers.question10;
-    
-//     return total_score;
-// }
-
-// function getInfoBasedOnScore(){
-//     if(totalScore() < 7){
-//         var score_info = "Você acertou menos de 7 questões :(";
-//     } else if(totalScore() > 7){
-//         var score_info = "Parabéns! Você acertou mais que a média!"
-//     }
-
-//     return score_info;
-// }
 
 var submit1 = document.getElementById('submit1');
 var submit2 = document.getElementById('submit2');
@@ -142,10 +74,7 @@ var submit3 = document.getElementById('submit3');
 var submit4 = document.getElementById('submit4');
 var submit5 = document.getElementById('submit5');
 var submit6 = document.getElementById('submit6');
-// var submit7 = document.getElementById('submit7');
-// var submit8 = document.getElementById('submit8');
-// var submit9 = document.getElementById('submit9');
-// var submit10 = document.getElementById('submit10');
+
 
 function nextQuestion(question_number){
     var current_question_number = question_number - 1;
@@ -210,10 +139,10 @@ function growProgressBar(percentage_width){
 }
 
 function alert_resultado1() {
-    const id = document.getElementById('correct')
-    const response = id.childNodes[3].getAttribute('aria-valuetext')
-
-    if(Number(response) == 1) {
+    const numberOne = document.getElementById('question-1')
+    const response = numberOne.childNodes[7].childNodes[1].childNodes[3].getAttribute('aria-valuetext')
+    
+    if(Number(response) === 1) {
         alert("Parabéns! Você acertou a questão!");
         pontos++;
         console.log(pontos);
@@ -221,15 +150,14 @@ function alert_resultado1() {
         alert("Você errou a questão :( Mas vamos pra próxima!");
         console.log(pontos);
     }
+
 }
 
 function alert_resultado2() {
-    const id = document.getElementById('correct')
-    const response = id.childNodes[3].getAttribute('aria-valuetext')
-
-    console.log(response)
-
-    if(Number(response) == 1) {
+    const numberOne = document.getElementById('question-2')
+    const response = numberOne.childNodes[7].childNodes[1].childNodes[3].getAttribute('aria-valuetext')
+    
+    if(Number(response) === 1) {
         alert("Parabéns! Você acertou a questão!");
         pontos++;
         console.log(pontos);
@@ -243,16 +171,25 @@ function alert_resultado3() {
     const id = document.getElementById('correct')
     const response = id.childNodes[3].getAttribute('aria-valuetext')
 
+    console.log(id)
+    console.log(response)
+    console.log(response,"Reposta Selecionada")
+    console.log(1,"Reposta correta")
+
+    /*
     if(Number(response) == 1) {
         alert("Parabéns! Você acertou a questão!");
     } else {
         alert("Você errou a questão :( Mas vamos pra próxima!");
-    }
+    }*/
 }
 
 function alert_resultado4() {
     const id = document.getElementById('correct')
     const response = id.childNodes[3].getAttribute('aria-valuetext')
+
+    console.log(response,"Reposta Selecionada")
+    console.log(1,"Reposta correta")
 
     if(Number(response) == 1) {
         alert("Parabéns! Você acertou a questão!");
