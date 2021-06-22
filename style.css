@@ -237,6 +237,10 @@ footer {
   height: 25px;
  }
 
- .timer {
-   margin: 10px;
+ #timer {
+  text-align: center;
+  border: 5px solid green;
+  width: 20%;
+  margin: auto;
+  margin-bottom: 15px;
  }

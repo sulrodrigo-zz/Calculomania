@@ -55,11 +55,9 @@ var question = 2;
 function startTimer(duration, display,execute) {
     var timer = duration, minutes, seconds;
     
-    
     if(execute){
         setInterval(function () {
-
-            if(question === 4){
+            if(question === 13){
                 display.textContent = ""
                 clearInterval()
                 return
@@ -84,10 +82,7 @@ function startTimer(duration, display,execute) {
 var answers = {};
 
 var question_zero = document.getElementById('question-0');
-
 var question_one = document.getElementById('question-1');
-
-
 var question_two = document.getElementById('question-2');
 var question_three = document.getElementById('question-3');
 var question_four = document.getElementById('question-4');
@@ -130,7 +125,7 @@ submit0.addEventListener('click', function(){
     nextQuestion(1);
     growProgressBar('0%');
     const ab = ()=>{
-        var duration = 2
+        var duration = 45
         startTimer(duration, document.getElementById('timer'),true)
     }
     ab()
