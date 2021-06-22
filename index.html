@@ -1,0 +1,119 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Calculomania</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">	
+    <div class="img-logo">
+      <img src="images/calculomania_logo.png">
+    </div>
+    <div class="row">
+  	  <div class="two-thirds column">
+        <div id="progress_bar"></div>
+  	  	<form class="questions_box">
+
+  	  		<div id="question-1">
+  	  		  <h2>Questão 1</h2>
+            <h3>Suponha que sobre uma mesa haja um livro. Qual será a força que a mesa exerce sobre o livro, sabendo que a força com que a Terra o atrai é de 10N?</h3>
+              <div class="conteudo">
+                <div id="correct" class="content">
+                  <h3 style="color: white;">Arraste pra cá a resposta correta!</h3>
+                </div>
+                <div class="content">
+                  <p id="question-1-answer-a" class="draggable" draggable="true" >5 N</p>
+                  <p id="question-1-answer-b" class="draggable" draggable="true" >10 N</p>
+                  <p id="question-1-answer-c" class="draggable" draggable="true" >15 N</p>
+                  <p id="question-1-answer-d" class="draggable" draggable="true" >20 N</p>
+                  <p id="question-1-answer-e" class="draggable" draggable="true" >25 N</p>
+                </div>
+              </div>
+  				  <div id="submit1" class="button" onclick="alert_resultado1()">Enviar Resposta</div>
+            <div class="clearfix"></div>
+  			  </div>
+
+  			 <div id="question-2">
+  				 <h2>Questão 2</h2>
+  				 <h3>Suponha que você tenha uma partícula em movimento circular uniforme. Podemos dizer que:</h3>
+  	  		 <input id="question-2-answer-a" type="radio" name="favelang" value="0"> Aceleração vetorial é constante.<br>
+  				 <input id="question-2-answer-b" type="radio" name="favelang" value="1"> O módulo da velocidade vetorial é constante.<br>
+  				 <input id="question-2-answer-c" type="radio" name="favelang" value="0"> O módulo da aceleração vetorial é nulo.<br>
+           <input id="question-2-answer-d" type="radio" name="favelang" value="0"> A velocidade vetorial é constante.<br>
+           <input id="question-2-answer-e" type="radio" name="favelang" value="0"> A velocidade vetorial tem seu sentido para o centro da trajetória.<br>
+  				 <div id="submit2" class="button" onclick="alert_resultado2()">Enviar Resposta</div>
+           <div class="clearfix"></div>
+  			 </div>
+  			
+  			 <div id="question-3">	
+  				 <h2>Questão 3</h2>
+  				 <h3>Um veículo de passeio consegue acelerar de 0 a 100 km/h em cerca de 11s. Determine sua aceleração média em m/s² e assinale a alternativa correspondente.</h3>
+  	  		 <input id="question-3-answer-a" type="radio" name="favelang" value="0"> 15,0 m/s²<br>
+  				 <input id="question-3-answer-b" type="radio" name="favelang" value="0"> 2,0 m/s²<br>
+  				 <input id="question-3-answer-c" type="radio" name="favelang" value="1"> 2,5 m/s²<br>
+           <input id="question-3-answer-d" type="radio" name="favelang" value="0"> 5,0 m/s²<br>
+           <input id="question-3-answer-e" type="radio" name="favelang" value="0"> 1,0 m/s²<br>
+  				 <div id="submit3" class="button" onclick="alert_resultado3()">Enviar Resposta</div>
+           <div class="clearfix"></div>
+  			 </div>
+
+         <div id="question-4">
+            <h2>Questão 4</h2>
+            <h3>No alto da torre de uma emissora de televisão, duas luzes "piscam" com frequências diferentes. A primeira "pisca" 15 vezes por minuto e a segunda "pisca" 10 vezes por minuto. Se num certo instante, as luzes piscam simultaneamente, após quantos segundos elas voltarão a piscar simultaneamente?</h3>
+            <input id="question-4-answer-a" type="radio" name="favelang" value="1"> 12 segundos<br>
+            <input id="question-4-answer-b" type="radio" name="favelang" value="0"> 10 segundos<br>
+            <input id="question-4-answer-c" type="radio" name="favelang" value="0"> 20 segundos<br>
+            <input id="question-4-answer-d" type="radio" name="favelang" value="0"> 15 segundos<br>
+            <input id="question-4-answer-e" type="radio" name="favelang" value="0"> 30 segundos<br>
+            <div id="submit4" class="button" onclick="alert_resultado4()">Enviar Resposta</div>
+            <div class="clearfix"></div>
+          </div>
+
+          <div id="question-5">
+            <h2>Questão 5</h2>
+            <h3>Um ponto material executa um movimento acelerado, de modo que a sua velocidade passa a ser de 30 m/s após partir do repouso, em um intervalo de tempo de 5s. Assinale a alternativa que indica corretamente a aceleração média desenvolvida por ele.</h3>
+            <input id="question-5-answer-a" type="radio" name="favelang" value="0"> 2,5 m/s²<br>
+            <input id="question-5-answer-b" type="radio" name="favelang" value="0"> 0,5 m/s²<br>
+            <input id="question-5-answer-c" type="radio" name="favelang" value="0"> 5 m/s²<br>
+            <input id="question-5-answer-d" type="radio" name="favelang" value="0"> 10 m/s²<br>
+            <input id="question-5-answer-e" type="radio" name="favelang" value="1"> 6 m/s²<br>
+            <div id="submit5" class="button" onclick="alert_resultado5()">Enviar Resposta</div>
+            <div class="clearfix"></div>
+          </div>
+
+         <div id="question-6"> 
+           <h2>Obrigado por jogar!</h2>
+           <h3>Sua pontuação foi: </h3>
+           <h1 id=printtotalscore></h1>
+           <p id=printscoreinfo></p>
+
+           <h3>Gabarito abaixo.</h3>
+
+           <div class="gabarito">
+            <input class="buttonGab" type="button" onclick="alert_gabarito1()" value="Exibir Resposta da Questão 1" />
+            <input class="buttonGab" type="button" onclick="alert_gabarito2()" value="Exibir Resposta da Questão 2" />
+            <input class="buttonGab" type="button" onclick="alert_gabarito3()" value="Exibir Resposta da Questão 3" />
+            <input class="buttonGab" type="button" onclick="alert_gabarito4()" value="Exibir Resposta da Questão 4" />
+            <input class="buttonGab" type="button" onclick="alert_gabarito5()" value="Exibir Resposta da Questão 5" />
+            <input class="buttonGab" type="button" onclick="alert_gabarito6()" value="Exibir Resposta da Questão 6" />
+            <input class="buttonGab" type="button" onclick="alert_gabarito7()" value="Exibir Resposta da Questão 7" />
+            <input class="buttonGab" type="button" onclick="alert_gabarito8()" value="Exibir Resposta da Questão 8" />
+            <input class="buttonGab" type="button" onclick="alert_gabarito9()" value="Exibir Resposta da Questão 9" />
+            <input class="buttonGab" type="button" onclick="alert_gabarito10()" value="Exibir Resposta da Questão 10" />
+           </div>
+
+         </div>
+
+  	  	</form>
+
+  	  </div>
+  	</div>
+  </div>
+
+  <script src="scripts.js"></script>
+
+</body>
+</html>
