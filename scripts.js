@@ -13,12 +13,13 @@ draggables.forEach(draggable => {
 
         if(finalTarget.length > 4){
             //retorna o elemento para caixa de baixo
-            contents.forEach(content => {
-                const idContent = content.getElementById('correct') 
+            contents.forEach((content) => { 
+                const id = document.getElementById('correct')
+                const strange = id.childNodes[4]
+
+                content.appendChild(strange)
             });
-
         }
-
 
         draggable.classList.remove('dragging');
     });
@@ -30,6 +31,7 @@ contents.forEach(content => {
            
         const afterElement = getDragAfterElement(content, e.clientY);
         const draggable = document.querySelector('.dragging');
+
 
         if (afterElement == null){
             content.appendChild(draggable);
@@ -206,7 +208,10 @@ function growProgressBar(percentage_width){
 }
 
 function alert_resultado1() {
-    if(answers.question1 == 1) {
+    const id = document.getElementById('correct')
+    const response = id.childNodes[3].getAttribute('aria-valuetext')
+
+    if(Number(response) == 1) {
         alert("Parabéns! Você acertou a questão!");
     } else {
         alert("Você errou a questão :( Mas vamos pra próxima!");
