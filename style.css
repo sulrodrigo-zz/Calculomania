@@ -88,6 +88,7 @@ h3 {
 }
 
 .questions_box {
+  min-height: 70%;
   background-color: #ffffff;
   padding: 60px;
   text-align: left;
@@ -153,12 +154,19 @@ h3 {
   display: none;
 }
 
+.conteudo{
+  width: 100%;
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-around;
+}
 .content{
+  min-height: 100%!important;
+  max-height: 100%!important;
   background-color: #333;
-  padding: 1rem;
+  padding: .5rem;
   margin-top: 1rem;
-  align: center;
-  width: 50%;
+  width: 45%;
 }
 
 .draggable{
@@ -170,6 +178,11 @@ h3 {
 
 #correct {
   background-color: green;
+  min-height: 100%!important;
+  max-height: 100%!important;
+  padding: .5rem;
+  margin-top: 1rem;
+  width: 45%;
 }
 
 .draggable.dragging {
