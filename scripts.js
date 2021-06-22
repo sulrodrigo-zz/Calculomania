@@ -15,11 +15,9 @@ draggables.forEach(draggable => {
             contents.forEach((content) => { 
                 const id = document.getElementById('correct')
                 const strange = id.childNodes[4]
-
                 content.appendChild(strange)
             });
         }
-
         draggable.classList.remove('dragging');
     });
 });
@@ -29,7 +27,6 @@ contents.forEach(content => {
         e.preventDefault();
         const afterElement = getDragAfterElement(content, e.clientY);
         const draggable = document.querySelector('.dragging');
-
         if (afterElement == null){
             content.appendChild(draggable);
         } else {
@@ -88,7 +85,6 @@ function nextQuestion(question_number){
     var current_question_number = question_number - 1;
     var question_number = question_number.toString();
     var current_question_number = current_question_number.toString();
-
     var el = document.getElementById('question-'+question_number);
     var el2 = document.getElementById('question-'+current_question_number);
 
@@ -146,8 +142,6 @@ submit11.addEventListener('click', function(){
     growProgressBar('100%');
     document.getElementById("printtotalscore").innerHTML = pontos;
 })
-submit12.addEventListener('click', function(){
-})
 
 function growProgressBar(percentage_width){
     var bar = document.getElementById("progress_bar");
@@ -157,7 +151,6 @@ function growProgressBar(percentage_width){
 function alert_instrucoes() {
     alert("Calculomania®: Arraste para ganhar!\n\nCom o mouse, segure, arraste e solte o retângulo com a resposta correta no espaço em branco à direita. Em seguida, clique em “Enviar resposta”. Acima, você poderá ver se acertou a questão (ou não). Seus resultados e os gabaritos estarão ao final do jogo.");
 }
-
 
 function alert_resultado1() {
     const numberOne = document.getElementById('question-1')
@@ -358,6 +351,7 @@ function alert_gabarito11() {
 }
 
 function startTimer(duration, display) {
+    var question = 1;
     var timer = duration, minutes, seconds;
     setInterval(function () {
         minutes = parseInt(timer / 60, 10);
@@ -367,11 +361,15 @@ function startTimer(duration, display) {
         display.textContent = minutes + ":" + seconds;
         if (--timer < 0) {
             timer = duration;
+            alert('Acabou o tempo!');
+            nextQuestion(question++);
         }
     }, 1000);
 }
+
 window.onload = function () {
-    var duration = 60 * 5; // Converter para segundos
-        display = document.querySelector('#timer'); // selecionando o timer
-    startTimer(duration, display); // iniciando o timer
+    var duration = 5 // Converter para segundos
+        display = document.getElementById('timer'); // selecionando o timer
+        startTimer(duration, display); // iniciando o timer
 };
+

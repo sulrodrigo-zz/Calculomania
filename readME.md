@@ -6,7 +6,7 @@ Link do Jogo: https://github.com/sulrodrigo/Calculomania
 ---
 # Como funciona:
 
->O jogo é enviado para os alunos pelo professor através de um link. Funciona na exibição de enunciados e de três possíveis respostas para o aluno escolher, enquanto o professor assiste. Há um tempo determinado para que o aluno arraste a resposta que achar correta até o ponto em que o site determinará se houve acerto ou erro. O número de questões é determinado pelo professor e o total de acertos pode ser observado na lateral da interface.
+>O jogo é enviado para os alunos pelo professor através de um link. Funciona na exibição de enunciados e de cinco possíveis respostas para o aluno escolher. Há um tempo determinado para que o aluno arraste a resposta que achar correta até o ponto em que o site determinará se houve acerto ou erro. O total de acertos pode ser observado ao fim do jogo, junto ao gabarito de cada questão.
 >
 ---
 # Como Jogar:
@@ -37,4 +37,4 @@ Link do Jogo: https://github.com/sulrodrigo/Calculomania
 ---
 
 
-_Trabalho apresentado como G2 da disciplina Pipopo do Curso de Design de Mídia Digital da Pontifícia Universidade Católica de Laila Rebelo dos Santos e Thiago Mendes, desenvolvido para o professor Igor Ramos._
+_Trabalho do semestre 2021.1 apresentado como G2 da disciplina Fundamentos da Mídia Digital do Curso de Design de Mídia Digital da Pontifícia Universidade Católica de Laila Rebelo dos Santos e Thiago Mendes, desenvolvido para o professor Igor Ramos._
