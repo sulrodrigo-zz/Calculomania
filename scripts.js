@@ -50,10 +50,44 @@ function getDragAfterElement(content, y) {
     }, { offset: Number.NEGATIVE_INFINITY }).element;
 };
 
+var question = 2;
+
+function startTimer(duration, display,execute) {
+    var timer = duration, minutes, seconds;
+    
+    
+    if(execute){
+        setInterval(function () {
+
+            if(question === 4){
+                display.textContent = ""
+                clearInterval()
+                return
+            }
+
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            display.textContent = minutes + ":" + seconds;
+            if (--timer < 0) {
+                timer = duration;
+                alert('Acabou o tempo!');
+                nextQuestion(question++);
+            }
+        }, 1000);
+    }else{
+        return
+    }
+}
+
 var answers = {};
 
 var question_zero = document.getElementById('question-0');
+
 var question_one = document.getElementById('question-1');
+
+
 var question_two = document.getElementById('question-2');
 var question_three = document.getElementById('question-3');
 var question_four = document.getElementById('question-4');
@@ -80,7 +114,6 @@ var submit10 = document.getElementById('submit10');
 var submit11 = document.getElementById('submit11');
 var submit12 = document.getElementById('submit12');
 
-
 function nextQuestion(question_number){
     var current_question_number = question_number - 1;
     var question_number = question_number.toString();
@@ -92,13 +125,19 @@ function nextQuestion(question_number){
     el2.style.display = "none";
 }
 
+
 submit0.addEventListener('click', function(){
     nextQuestion(1);
     growProgressBar('0%');
+    const ab = ()=>{
+        var duration = 2
+        startTimer(duration, document.getElementById('timer'),true)
+    }
+    ab()
 })
 
 submit1.addEventListener('click', function(){
-    nextQuestion(2);
+    //nextQuestion(2);
     growProgressBar('5%');
 })
 submit2.addEventListener('click', function(){
@@ -141,6 +180,9 @@ submit11.addEventListener('click', function(){
     nextQuestion(12);
     growProgressBar('100%');
     document.getElementById("printtotalscore").innerHTML = pontos;
+
+    document.getElementById('timer').remove()
+    startTimer(0,numberOne,false)
 })
 
 function growProgressBar(percentage_width){
@@ -296,6 +338,9 @@ function alert_resultado11() {
     const numberOne = document.getElementById('question-11')
     const response = numberOne.childNodes[7].childNodes[1].childNodes[3].getAttribute('aria-valuetext')
     
+    document.getElementById('timer').remove()
+    startTimer(0,numberOne,false)
+
     if(Number(response) === 1) {
         alert("Parabéns! Você acertou a questão!");
         pontos++;
@@ -350,26 +395,4 @@ function alert_gabarito11() {
     alert("Usando a fórmula para calcular a área do cubo, calcularemos a área para cada um deles separadamente. Em seguida, faremos a subtração entre os resultados obtidos:\n\nA₁ = 6l²\nA₁ = 6 . 10²\nA₁ = 6 . 100\nA₁ = 600 cm²\n\nA₂ = 6l²\nA₂ = 6 . 25²\nA₂ = 6 . 625\nA₂ = 3750 cm²\n\nA₂ - A₁ = 3750 cm² - 600 cm² = 3150 cm²\nResposta: A");
 }
 
-function startTimer(duration, display) {
-    var question = 1;
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-        display.textContent = minutes + ":" + seconds;
-        if (--timer < 0) {
-            timer = duration;
-            alert('Acabou o tempo!');
-            nextQuestion(question++);
-        }
-    }, 1000);
-}
-
-window.onload = function () {
-    var duration = 5 // Converter para segundos
-        display = document.getElementById('timer'); // selecionando o timer
-        startTimer(duration, display); // iniciando o timer
-};
 
