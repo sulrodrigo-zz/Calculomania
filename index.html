@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="utf-8">
 
@@ -17,13 +17,24 @@
         <div id="progress_bar"></div>
   	  	<form class="questions_box">
 
+          <div id="question-0">
+  	  		  <h1>Como Jogar:</h2>
+            <h2>Calculomania®: Arraste para ganhar!</h3>
+            <h3>O jogo on-line interativo de questões de Matemática e Física veio para animar seus cálculos e inovar sua forma de ver as Exatas! Você terá um curto espaço de tempo para resolver uma série de questões sobre as matérias que seu professor abordou! Você terá 5 opções em cada questão.</h3>
+            <h3>Com o mouse, segure e arraste a opção correta até o espaço em branco e clique em “Enviar resposta”. Confira se sua resposta foi certa ou errada! Você poderá conferir seus resultados ao fim do jogo! Também estará disponível uma aba de gabarito para cada questão respondida. Confira seu desempenho e otimize sua forma de exercitar!</h3>
+            <h3>Boa sorte!</h3>
+            <div id="submit0" class="button" >Começar o Jogo</div>
+            <input class="buttonInst" type="button" onclick="alert_instrucoes()" value="Instruções" />
+            <div class="clearfix"></div>
+  			  </div>
+
   	  		<div id="question-1">
   	  		  <h2>Questão 1</h2>
             <div id="timer"></div>
             <h3>Suponha que sobre uma mesa haja um livro. Qual será a força que a mesa exerce sobre o livro, sabendo que a força com que a Terra o atrai é de 10N?</h3>
               <div class="conteudo">
                 <div id="correct" class="content">
-                  <h3 style="color: white; text-align: center;">?</h3>
+                  <h5 style="color: white; text-align: center;">Arraste sua resposta para cá:</h5>
                 </div>
                 <div class="content" >
                   <p id="question-1-answer-a" class="draggable" draggable="true" aria-valuetext="0" >5 N</p>
@@ -33,17 +44,18 @@
                   <p id="question-1-answer-e" class="draggable" draggable="true" aria-valuetext="0" >25 N</p>
                 </div>
               </div>
-  				  <div id="submit1" class="button" onclick="alert_resultado1()">Enviar Resposta</div>
+            <div id="submit1" class="button" onclick="alert_resultado1()">Enviar Resposta</div>
+            <input class="buttonInst" type="button" onclick="alert_instrucoes()" value="Instruções" />
             <div class="clearfix"></div>
   			  </div>
 
-          <div id="question-2">
+  	  		<div id="question-2">
   	  		  <h2>Questão 2</h2>
             <div id="timer"></div>
             <h3>Suponha que você tenha uma partícula em movimento circular uniforme. Podemos dizer que:</h3>
               <div class="conteudo">
                 <div id="correct" class="content">
-                  <h3 style="color: white; text-align: center;">?</h3>
+                  <h5 style="color: white; text-align: center;">Arraste sua resposta para cá:</h5>
                 </div>
                 <div class="content" >
                   <p id="question-2-answer-a" class="draggable" draggable="true" aria-valuetext="0" >Aceleração vetorial é constante. </p>
@@ -53,7 +65,8 @@
                   <p id="question-2-answer-e" class="draggable" draggable="true" aria-valuetext="0" >A velocidade vetorial tem seu sentido para o centro da trajetória.</p>
                 </div>
               </div>
-  				  <div id="submit2" class="button" onclick="alert_resultado2()">Enviar Resposta</div>
+              <div id="submit2" class="button" onclick="alert_resultado2()">Enviar Resposta</div>
+            <input class="buttonInst" type="button" onclick="alert_instrucoes()" value="Instruções" />
             <div class="clearfix"></div>
   			  </div>
 
@@ -63,7 +76,7 @@
             <h3>Um veículo de passeio consegue acelerar de 0 a 100 km/h em cerca de 11s. Determine sua aceleração média em m/s² e assinale a alternativa correspondente.</h3>
               <div class="conteudo">
                 <div id="correct" class="content">
-                  <h3 style="color: white; text-align: center;">?</h3>
+                  <h5 style="color: white; text-align: center;">Arraste sua resposta para cá:</h5>
                 </div>
                 <div class="content" >
                   <p id="question-3-answer-a" class="draggable" draggable="true" aria-valuetext="0" >15,0 m/s²</p>
@@ -74,6 +87,7 @@
                 </div>
               </div>
   				  <div id="submit3" class="button" onclick="alert_resultado3()">Enviar Resposta</div>
+            <input class="buttonInst" type="button" onclick="alert_instrucoes()" value="Instruções" />
             <div class="clearfix"></div>
   			  </div>
 
@@ -83,7 +97,7 @@
             <h3>No alto da torre de uma emissora de televisão, duas luzes "piscam" com frequências diferentes. A primeira "pisca" 15 vezes por minuto e a segunda "pisca" 10 vezes por minuto. Se num certo instante, as luzes piscam simultaneamente, após quantos segundos elas voltarão a piscar simultaneamente?</h3>
               <div class="conteudo">
                 <div id="correct" class="content">
-                  <h3 style="color: white; text-align: center;">?</h3>
+                  <h5 style="color: white; text-align: center;">Arraste sua resposta para cá:</h5>
                 </div>
                 <div class="content" >
                   <p id="question-4-answer-a" class="draggable" draggable="true" aria-valuetext="1" >12 segundos</p>
@@ -94,6 +108,7 @@
                 </div>
               </div>
   				  <div id="submit4" class="button" onclick="alert_resultado4()">Enviar Resposta</div>
+            <input class="buttonInst" type="button" onclick="alert_instrucoes()" value="Instruções" />
             <div class="clearfix"></div>
   			  </div>
 
@@ -103,7 +118,7 @@
             <h3>Um ponto material executa um movimento acelerado, de modo que a sua velocidade passa a ser de 30 m/s após partir do repouso, em um intervalo de tempo de 5s. Assinale a alternativa que indica corretamente a aceleração média desenvolvida por ele.</h3>
               <div class="conteudo">
                 <div id="correct" class="content">
-                  <h3 style="color: white; text-align: center;">?</h3>
+                  <h5 style="color: white; text-align: center;">Arraste sua resposta para cá:</h5>
                 </div>
                 <div class="content" >
                   <p id="question-5-answer-a" class="draggable" draggable="true" aria-valuetext="0" >2,5 m/s²</p>
@@ -114,6 +129,7 @@
                 </div>
               </div>
   				  <div id="submit5" class="button" onclick="alert_resultado5()">Enviar Resposta</div>
+            <input class="buttonInst" type="button" onclick="alert_instrucoes()" value="Instruções" />
             <div class="clearfix"></div>
   			  </div>
           
@@ -123,26 +139,127 @@
             <h3>Dentro de um elevador, um objeto de peso 100N está apoiado sobre uma superfície. O elevador está descendo e freando com aceleração vertical e para cima de 0,1m/s². Considere a aceleração da gravidade como 10m/s². Durante o tempo da frenagem, a força que sustenta o objeto vale, em newtons:</h3>
               <div class="conteudo">
                 <div id="correct" class="content">
-                  <h3 style="color: white; text-align: center;">?</h3>
+                  <h5 style="color: white; text-align: center;">Arraste sua resposta para cá:</h5>
                 </div>
                 <div class="content" >
-                  <p id="question-6-answer-a" class="draggable" draggable="true" aria-valuetext="1" >101</p>
+                  <p id="question-6-answer-a" class="draggable" draggable="true" aria-valuetext="0" >110</p>
                   <p id="question-6-answer-b" class="draggable" draggable="true" aria-valuetext="0" >99</p>
-                  <p id="question-6-answer-c" class="draggable" draggable="true" aria-valuetext="0" >110</p>
+                  <p id="question-6-answer-c" class="draggable" draggable="true" aria-valuetext="1" >101</p>
                   <p id="question-6-answer-d" class="draggable" draggable="true" aria-valuetext="0" >90</p>
-                  <p id="question-6-answer-e" class="draggable" draggable="true" aria-valuetext="" >100</p>
+                  <p id="question-6-answer-e" class="draggable" draggable="true" aria-valuetext="0" >100</p>
                 </div>
               </div>
   				  <div id="submit6" class="button" onclick="alert_resultado6()">Enviar Resposta</div>
+            <input class="buttonInst" type="button" onclick="alert_instrucoes()" value="Instruções" />
             <div class="clearfix"></div>
   			  </div>
 
+          <div id="question-7">
+  	  		  <h2>Questão 7</h2>
+            <div id="timer"></div>
+            <h3>Ao fornecer 300 calorias de calor para um corpo, verifica-se como consequência uma variação da temperatura igual a 50°C. Determine a capacidade térmica deste corpo.</h3>
+              <div class="conteudo">
+                <div id="correct" class="content">
+                  <h5 style="color: white; text-align: center;">Arraste sua resposta para cá:</h5>
+                </div>
+                <div class="content" >
+                  <p id="question-7-answer-a" class="draggable" draggable="true" aria-valuetext="0" >7 cal/°C</p>
+                  <p id="question-7-answer-b" class="draggable" draggable="true" aria-valuetext="0" >12 cal/°C</p>
+                  <p id="question-7-answer-c" class="draggable" draggable="true" aria-valuetext="0" >3 cal/°C</p>
+                  <p id="question-7-answer-d" class="draggable" draggable="true" aria-valuetext="1" >6 cal/°C</p>
+                  <p id="question-7-answer-e" class="draggable" draggable="true" aria-valuetext="0" >5 cal/°C</p>
+                </div>
+              </div>
+  				  <div id="submit7" class="button" onclick="alert_resultado7()">Enviar Resposta</div>
+            <input class="buttonInst" type="button" onclick="alert_instrucoes()" value="Instruções" />
+            <div class="clearfix"></div>
+  			  </div>
 
+          <div id="question-8">
+  	  		  <h2>Questão 8</h2>
+            <div id="timer"></div>
+            <h3>Em uma manhã de céu azul, um banhista na praia observa que a areia está muito quente e a água do mar está muito fria. De noite, esse mesmo banhista observa que a areia da praia está fria e a água do mar está morna. O fenômeno observado deve-se ao fato que:</h3>
+              <div class="conteudo">
+                <div id="correct" class="content">
+                  <h5 style="color: white; text-align: center;">Arraste sua resposta para cá:</h5>
+                </div>
+                <div class="content" >
+                  <p id="question-8-answer-a" class="draggable" draggable="true" aria-valuetext="1" >A densidade da água do mar é menor que a da areia.</p>
+                  <p id="question-8-answer-b" class="draggable" draggable="true" aria-valuetext="0" >O calor específico da areia é menor que o calor específico da água.</p>
+                  <p id="question-8-answer-c" class="draggable" draggable="true" aria-valuetext="0" >O coeficiente de dilatação térmica da água é maior que o coeficiente de dilatação térmica da areia.</p>
+                  <p id="question-8-answer-d" class="draggable" draggable="true" aria-valuetext="0" >O calor contido na areia, à noite, propaga-se para a água do mar.</p>
+                  <p id="question-8-answer-e" class="draggable" draggable="true" aria-valuetext="0" >A agitação da água do mar retarda seu resfriamento.</p>
+                </div>
+              </div>
+  				  <div id="submit8" class="button" onclick="alert_resultado8()">Enviar Resposta</div>
+            <input class="buttonInst" type="button" onclick="alert_instrucoes()" value="Instruções" />
+            <div class="clearfix"></div>
+  			  </div>
 
+          <div id="question-9">
+  	  		  <h2>Questão 9</h2>
+            <div id="timer"></div>
+            <h3>Um amolador de facas, ao operar um esmeril, é atingido por fagulhas incandescentes, mas não se queima. Isso acontece porque as fagulhas:</h3>
+              <div class="conteudo">
+                <div id="correct" class="content">
+                  <h5 style="color: white; text-align: center;">Arraste sua resposta para cá:</h5>
+                </div>
+                <div class="content" >
+                  <p id="question-9-answer-a" class="draggable" draggable="true" aria-valuetext="0" >Têm calor específico muito grande.</p>
+                  <p id="question-9-answer-b" class="draggable" draggable="true" aria-valuetext="0" >Têm temperatura muito baixa.</p>
+                  <p id="question-9-answer-c" class="draggable" draggable="true" aria-valuetext="1" >Têm capacidade térmica muito pequena.</p>
+                  <p id="question-9-answer-d" class="draggable" draggable="true" aria-valuetext="0" >Estão em mudança de estado.</p>
+                  <p id="question-9-answer-e" class="draggable" draggable="true" aria-valuetext="0" >Não transportam energia.</p>
+                </div>
+              </div>
+  				  <div id="submit9" class="button" onclick="alert_resultado9()">Enviar Resposta</div>
+            <input class="buttonInst" type="button" onclick="alert_instrucoes()" value="Instruções" />
+            <div class="clearfix"></div>
+  			  </div>
 
+          <div id="question-10">
+  	  		  <h2>Questão 10</h2>
+            <div id="timer"></div>
+            <h3>Qual a área total de um cubo cujas arestas medem 15 centímetros?</h3>
+              <div class="conteudo">
+                <div id="correct" class="content">
+                  <h5 style="color: white; text-align: center;">Arraste sua resposta para cá:</h5>
+                </div>
+                <div class="content" >
+                  <p id="question-10-answer-a" class="draggable" draggable="true" aria-valuetext="0" >550cm²</p>
+                  <p id="question-10-answer-b" class="draggable" draggable="true" aria-valuetext="1" >1350cm²</p>
+                  <p id="question-10-answer-c" class="draggable" draggable="true" aria-valuetext="0" >1450cm²</p>
+                  <p id="question-10-answer-d" class="draggable" draggable="true" aria-valuetext="0" >1800cm²</p>
+                  <p id="question-10-answer-e" class="draggable" draggable="true" aria-valuetext="0" >1850cm²</p>
+                </div>
+              </div>
+  				  <div id="submit10" class="button" onclick="alert_resultado10()">Enviar Resposta</div>
+            <input class="buttonInst" type="button" onclick="alert_instrucoes()" value="Instruções" />
+            <div class="clearfix"></div>
+  			  </div>
 
+          <div id="question-11">
+  	  		  <h2>Questão 11</h2>
+            <div id="timer"></div>
+            <h3>Qual a diferença entre as áreas de dois cubos que possuem arestas iguais a 10 e a 25 cm, respectivamente?</h3>
+              <div class="conteudo">
+                <div id="correct" class="content">
+                  <h5 style="color: white; text-align: center;">Arraste sua resposta para cá:</h5>
+                </div>
+                <div class="content" >
+                  <p id="question-11-answer-a" class="draggable" draggable="true" aria-valuetext="1" >3150 cm²</p>
+                  <p id="question-11-answer-b" class="draggable" draggable="true" aria-valuetext="0" >3250 cm²</p>
+                  <p id="question-11-answer-c" class="draggable" draggable="true" aria-valuetext="0" >3350 cm²</p>
+                  <p id="question-11-answer-d" class="draggable" draggable="true" aria-valuetext="0" >3450 cm²</p>
+                  <p id="question-11-answer-e" class="draggable" draggable="true" aria-valuetext="0" >3550 cm²</p>
+                </div>
+              </div>
+  				  <div id="submit11" class="button" onclick="alert_resultado11()">Enviar Resposta</div>
+            <input class="buttonInst" type="button" onclick="alert_instrucoes()" value="Instruções" />
+            <div class="clearfix"></div>
+  			  </div>
 
-         <div id="question-7"> 
+          <div id="question-12"> 
            <h2>Obrigado por jogar!</h2>
            <h3>Sua pontuação foi: </h3>
            <h1 id=printtotalscore></h1>
@@ -161,6 +278,7 @@
             <input class="buttonGab" type="button" onclick="alert_gabarito8()" value="Exibir Resposta da Questão 8" />
             <input class="buttonGab" type="button" onclick="alert_gabarito9()" value="Exibir Resposta da Questão 9" />
             <input class="buttonGab" type="button" onclick="alert_gabarito10()" value="Exibir Resposta da Questão 10" />
+            <input class="buttonGab" type="button" onclick="alert_gabarito11()" value="Exibir Resposta da Questão 11" />
            </div>
 
          </div>
@@ -175,6 +293,6 @@
 
 </body>
 <footer>
-  Trabalho de Laila Rebelo dos Santos e Thiago Mendes desenvolvido para o professor Igor Ramos.
+  Trabalho apresentado como G2 da disciplina Pipopo do Curso de Design de Mídia Digital da Pontifícia Universidade Católica de Laila Rebelo dos Santos e Thiago Mendes, desenvolvido para o professor Igor Ramos.
 </footer>
 </html>

@@ -9,12 +9,9 @@ draggables.forEach(draggable => {
     });
 
     draggable.addEventListener('dragend', (e) => {
-        console.log(e,'fim do movimento')
-
         const finalTarget = e.path[1].childNodes
 
         if(finalTarget.length > 4){
-            //retorna o elemento para caixa de baixo
             contents.forEach((content) => { 
                 const id = document.getElementById('correct')
                 const strange = id.childNodes[4]
@@ -30,10 +27,8 @@ draggables.forEach(draggable => {
 contents.forEach(content => {
     content.addEventListener('dragover', e => {
         e.preventDefault();
-           
         const afterElement = getDragAfterElement(content, e.clientY);
         const draggable = document.querySelector('.dragging');
-
 
         if (afterElement == null){
             content.appendChild(draggable);
@@ -60,20 +55,33 @@ function getDragAfterElement(content, y) {
 
 var answers = {};
 
+var question_zero = document.getElementById('question-0');
 var question_one = document.getElementById('question-1');
 var question_two = document.getElementById('question-2');
 var question_three = document.getElementById('question-3');
 var question_four = document.getElementById('question-4');
 var question_five = document.getElementById('question-5');
 var question_six = document.getElementById('question-6');
+var question_seven = document.getElementById('question-7');
+var question_eight = document.getElementById('question-8');
+var question_nine = document.getElementById('question-9');
+var question_ten = document.getElementById('question-10');
+var question_eleven = document.getElementById('question-11');
+var question_twelve = document.getElementById('question-12');
 
-
+var submit0 = document.getElementById('submit0');
 var submit1 = document.getElementById('submit1');
 var submit2 = document.getElementById('submit2');
 var submit3 = document.getElementById('submit3');
 var submit4 = document.getElementById('submit4');
 var submit5 = document.getElementById('submit5');
 var submit6 = document.getElementById('submit6');
+var submit7 = document.getElementById('submit7');
+var submit8 = document.getElementById('submit8');
+var submit9 = document.getElementById('submit9');
+var submit10 = document.getElementById('submit10');
+var submit11 = document.getElementById('submit11');
+var submit12 = document.getElementById('submit12');
 
 
 function nextQuestion(question_number){
@@ -88,55 +96,68 @@ function nextQuestion(question_number){
     el2.style.display = "none";
 }
 
+submit0.addEventListener('click', function(){
+    nextQuestion(1);
+    growProgressBar('0%');
+})
+
 submit1.addEventListener('click', function(){
     nextQuestion(2);
-    growProgressBar('10%');
+    growProgressBar('5%');
 })
 submit2.addEventListener('click', function(){
     nextQuestion(3);
-    growProgressBar('20%');
+    growProgressBar('15%');
 })
 submit3.addEventListener('click', function(){
     nextQuestion(4);
-    growProgressBar('30%');
+    growProgressBar('25%');
 })
 submit4.addEventListener('click', function(){
     nextQuestion(5);
-    growProgressBar('40%');
+    growProgressBar('35%');
 })
 submit5.addEventListener('click', function(){
     nextQuestion(6);
-    growProgressBar('50%');
+    growProgressBar('45%');
 })
 submit6.addEventListener('click', function(){
     nextQuestion(7);
-    growProgressBar('60%');
+    growProgressBar('55%');
 })
-// submit7.addEventListener('click', function(){
-//     nextQuestion(8);
-//     growProgressBar('70%');
-// })
-// submit8.addEventListener('click', function(){
-//     nextQuestion(9);
-//     growProgressBar('80%');
-// })
-// submit9.addEventListener('click', function(){
-//     nextQuestion(10);
-//     growProgressBar('90%');
-// })
-// submit10.addEventListener('click', function(){
-//     nextQuestion(11);
-// })
-
-// // submit5.addEventListener('click', function(){
-// //     document.getElementById("printtotalscore").innerHTML = totalScore();
-// //     document.getElementById("printscoreinfo").innerHTML = getInfoBasedOnScore();
-// // })
+submit7.addEventListener('click', function(){
+    nextQuestion(8);
+    growProgressBar('65%');
+})
+submit8.addEventListener('click', function(){
+    nextQuestion(9);
+    growProgressBar('75%');
+})
+submit9.addEventListener('click', function(){
+    nextQuestion(10);
+    growProgressBar('85%');
+})
+submit10.addEventListener('click', function(){
+    nextQuestion(11);
+    growProgressBar('95%');
+})
+submit11.addEventListener('click', function(){
+    nextQuestion(12);
+    growProgressBar('100%');
+    document.getElementById("printtotalscore").innerHTML = pontos;
+})
+submit12.addEventListener('click', function(){
+})
 
 function growProgressBar(percentage_width){
     var bar = document.getElementById("progress_bar");
     bar.style.width = percentage_width;
 }
+
+function alert_instrucoes() {
+    alert("Calculomania®: Arraste para ganhar!\n\nCom o mouse, segure, arraste e solte o retângulo com a resposta correta no espaço em branco à direita. Em seguida, clique em “Enviar resposta”. Acima, você poderá ver se acertou a questão (ou não). Seus resultados e os gabaritos estarão ao final do jogo.");
+}
+
 
 function alert_resultado1() {
     const numberOne = document.getElementById('question-1')
@@ -150,7 +171,6 @@ function alert_resultado1() {
         alert("Você errou a questão :( Mas vamos pra próxima!");
         console.log(pontos);
     }
-
 }
 
 function alert_resultado2() {
@@ -168,65 +188,137 @@ function alert_resultado2() {
 }
 
 function alert_resultado3() {
-    const id = document.getElementById('correct')
-    const response = id.childNodes[3].getAttribute('aria-valuetext')
-
-    console.log(id)
-    console.log(response)
-    console.log(response,"Reposta Selecionada")
-    console.log(1,"Reposta correta")
-
-    /*
-    if(Number(response) == 1) {
+    const numberOne = document.getElementById('question-3')
+    const response = numberOne.childNodes[7].childNodes[1].childNodes[3].getAttribute('aria-valuetext')
+    
+    if(Number(response) === 1) {
         alert("Parabéns! Você acertou a questão!");
+        pontos++;
+        console.log(pontos);
     } else {
         alert("Você errou a questão :( Mas vamos pra próxima!");
-    }*/
+        console.log(pontos);
+    }
 }
 
 function alert_resultado4() {
-    const id = document.getElementById('correct')
-    const response = id.childNodes[3].getAttribute('aria-valuetext')
-
-    console.log(response,"Reposta Selecionada")
-    console.log(1,"Reposta correta")
-
-    if(Number(response) == 1) {
+    const numberOne = document.getElementById('question-4')
+    const response = numberOne.childNodes[7].childNodes[1].childNodes[3].getAttribute('aria-valuetext')
+    
+    if(Number(response) === 1) {
         alert("Parabéns! Você acertou a questão!");
+        pontos++;
+        console.log(pontos);
     } else {
         alert("Você errou a questão :( Mas vamos pra próxima!");
+        console.log(pontos);
     }
 }
 
 function alert_resultado5() {
-    const id = document.getElementById('correct')
-    const response = id.childNodes[3].getAttribute('aria-valuetext')
-
-    if(Number(response) == 1) {
+    const numberOne = document.getElementById('question-5')
+    const response = numberOne.childNodes[7].childNodes[1].childNodes[3].getAttribute('aria-valuetext')
+    
+    if(Number(response) === 1) {
         alert("Parabéns! Você acertou a questão!");
+        pontos++;
+        console.log(pontos);
     } else {
         alert("Você errou a questão :( Mas vamos pra próxima!");
+        console.log(pontos);
     }
 }
 
 function alert_resultado6() {
-    const id = document.getElementById('correct')
-    const response = id.childNodes[3].getAttribute('aria-valuetext')
-
-    if(Number(response) == 1) {
+    const numberOne = document.getElementById('question-6')
+    const response = numberOne.childNodes[7].childNodes[1].childNodes[3].getAttribute('aria-valuetext')
+    
+    if(Number(response) === 1) {
         alert("Parabéns! Você acertou a questão!");
+        pontos++;
+        console.log(pontos);
     } else {
         alert("Você errou a questão :( Mas vamos pra próxima!");
+        console.log(pontos);
     }
 }
 
+function alert_resultado7() {
+    const numberOne = document.getElementById('question-7')
+    const response = numberOne.childNodes[7].childNodes[1].childNodes[3].getAttribute('aria-valuetext')
+    
+    if(Number(response) === 1) {
+        alert("Parabéns! Você acertou a questão!");
+        pontos++;
+        console.log(pontos);
+    } else {
+        alert("Você errou a questão :( Mas vamos pra próxima!");
+        console.log(pontos);
+    }
+}
+
+function alert_resultado8() {
+    const numberOne = document.getElementById('question-8')
+    const response = numberOne.childNodes[7].childNodes[1].childNodes[3].getAttribute('aria-valuetext')
+    
+    if(Number(response) === 1) {
+        alert("Parabéns! Você acertou a questão!");
+        pontos++;
+        console.log(pontos);
+    } else {
+        alert("Você errou a questão :( Mas vamos pra próxima!");
+        console.log(pontos);
+    }
+}
+
+function alert_resultado9() {
+    const numberOne = document.getElementById('question-9')
+    const response = numberOne.childNodes[7].childNodes[1].childNodes[3].getAttribute('aria-valuetext')
+    
+    if(Number(response) === 1) {
+        alert("Parabéns! Você acertou a questão!");
+        pontos++;
+        console.log(pontos);
+    } else {
+        alert("Você errou a questão :( Mas vamos pra próxima!");
+        console.log(pontos);
+    }
+}
+
+function alert_resultado10() {
+    const numberOne = document.getElementById('question-10')
+    const response = numberOne.childNodes[7].childNodes[1].childNodes[3].getAttribute('aria-valuetext')
+    
+    if(Number(response) === 1) {
+        alert("Parabéns! Você acertou a questão!");
+        pontos++;
+        console.log(pontos);
+    } else {
+        alert("Você errou a questão :( Mas vamos pra próxima!");
+        console.log(pontos);
+    }
+}
+
+function alert_resultado11() {
+    const numberOne = document.getElementById('question-11')
+    const response = numberOne.childNodes[7].childNodes[1].childNodes[3].getAttribute('aria-valuetext')
+    
+    if(Number(response) === 1) {
+        alert("Parabéns! Você acertou a questão!");
+        pontos++;
+        console.log(pontos);
+    } else {
+        alert("Você errou a questão :( Mas vamos pra próxima!");
+        console.log(pontos);
+    }
+}
 
 function alert_gabarito1() {
     alert("Como o livro se encontra em equilíbrio sobre a mesa, a força total que atua sobre ele é zero. Através da força resultante, temos:\n" + "Fr = m . a\n" + "F - P = 0\n" + "F = P => F = 10N");
 }
 
 function alert_gabarito2() {
-    alert("Por se tratar de um movimento circular uniforme, isto implica que a partícula tem módulo da velocidade vetorial constante. \n Alternativa B!");
+    alert("Por se tratar de um movimento circular uniforme, isto implica que a partícula tem módulo da velocidade vetorial constante.\nAlternativa B!");
 }
 
 function alert_gabarito3() {
@@ -244,3 +336,42 @@ function alert_gabarito5() {
 function alert_gabarito6() {
     alert("Aplicando a segunda lei de Newton, temos: \nFʀ = m . a  >>  N - P = m . a \nN - m . g = m . a  >>  N = m . a + m . g \nN = m (a + g)  >>  N = 10 (0,1 + 10) \nN = 10 . 10,1 = 101 N");
 }
+
+function alert_gabarito7() {
+    alert("Calculando capacidade térmica:\n\nC = Q/△T\nC = 300/50\nC = 6 cal/°C");
+}
+
+function alert_gabarito8() {
+    alert("Se as massas iguais de água e areia receberem ou perderem quantidades iguais de calor, a variação de temperatura da água será menor em módulo que a da areia, porque a água tem maior calor específico. \n Resposta: A!");
+}
+
+function alert_gabarito9() {
+    alert("C = Q / △T.\n\n Sendo a capacidade térmica C das fagulhas muito pequena, elas transferem pouco calor para o operador, o que é insuficiente para o queimar.\nResposta: C");
+}
+
+function alert_gabarito10() {
+    alert("A fórmula que pode ser usada para calcular a área total do cubo é:\n\nA = 6l²\n\nSubstituindo a aresta do cubo nesta fórmula, temos:\n\nA = 6 . 15²\nA = 6 . 225\nA = 1350cm²\n\nResposta: B");
+}
+
+function alert_gabarito11() {
+    alert("Usando a fórmula para calcular a área do cubo, calcularemos a área para cada um deles separadamente. Em seguida, faremos a subtração entre os resultados obtidos:\n\nA₁ = 6l²\nA₁ = 6 . 10²\nA₁ = 6 . 100\nA₁ = 600 cm²\n\nA₂ = 6l²\nA₂ = 6 . 25²\nA₂ = 6 . 625\nA₂ = 3750 cm²\n\nA₂ - A₁ = 3750 cm² - 600 cm² = 3150 cm²\nResposta: A");
+}
+
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        display.textContent = minutes + ":" + seconds;
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+window.onload = function () {
+    var duration = 60 * 5; // Converter para segundos
+        display = document.querySelector('#timer'); // selecionando o timer
+    startTimer(duration, display); // iniciando o timer
+};
