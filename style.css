@@ -1,6 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans';
 
-
 .container {
   position: relative;
   width: 100%;
@@ -164,7 +163,7 @@ h3 {
 }
 
 .buttonGab {
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -172,7 +171,7 @@ h3 {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .buttonGab:hover {
@@ -181,7 +180,7 @@ h3 {
 
 }
 
-#question-1, #question-2, #question-3, #question-4, #question-5, #question-6, #question-7, #question-8, #question-9, #question-10, #question-11, #question-12{
+#question-1, #question-2, #question-3, #question-4, #question-5, #question-6, #question-7, #question-8, #question-9, #question-10, #question-11, #question-12, #question-13, #question-14, #question-15, #question-16{
   display: none;
 }
 
@@ -227,8 +226,14 @@ h3 {
   transition: all 100ms ease-in-out;
 }
 
+#progress_bar.time {
+  background-color: red;
+  width: 100%;
+  height: 8px;
+  transition: all 100ms ease-in-out;
+}
+
 footer {
-  text-align: center;
   width: 100%;
   bottom: 0;
   right: 0;
